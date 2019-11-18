@@ -16,3 +16,6 @@ Dagger
 
 Uses the Open Weather API (https://openweathermap.org/api) to get current
 weather data.
+
+
+The app has a predefined list of cities and the uses can add the city by touching the button on the bottom right corner.
