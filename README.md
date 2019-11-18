@@ -1,4 +1,4 @@
-# openweatehr
+# openweather
 Implementation
 I used an architecture based on the MVP pattern and followed some Clean Architecture concepts. The application is divided in three main packages: Model, Data and View.
 
