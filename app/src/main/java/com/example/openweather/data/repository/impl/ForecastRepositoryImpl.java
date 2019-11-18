@@ -27,12 +27,12 @@ public class ForecastRepositoryImpl implements ForecastRepository {
     }
 
     @Override
-    public Observable<ForecastDto> getForecast(double latitude, double longitude) {
+    public Observable<ForecastDto> getForecast(Double latitude, Double longitude) {
         Observable<ForecastDto> forecast = service
                 .getForecast(
-//                        context.getString(R.string.FORECAST_API_KEY),
                         latitude,
-                        longitude);
+                        longitude, context.getString(R.string.FORECAST_API_KEY)
+                        );
 
         return forecast.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());

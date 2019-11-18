@@ -4,12 +4,15 @@ import com.example.openweather.MainApplication;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.logging.Level;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -40,8 +43,11 @@ public class NetworkModule {
     @Provides
     @Singleton
     OkHttpClient provideOkHttpClient(Cache cache) {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         OkHttpClient.Builder client = new OkHttpClient.Builder();
         client.cache(cache);
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        client.addInterceptor(logging);
         return client.build();
     }
 

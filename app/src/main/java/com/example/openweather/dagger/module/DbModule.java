@@ -44,19 +44,26 @@ public class DbModule {
     List<City> provideDefaultCities() {
         List<City> cities = new ArrayList<>(4);
 
-        City dublin = new City();
-        dublin.name = "Dublin";
-        dublin.fullDescription = "Dublin, Ireland";
-        dublin.latitude = 53.350140;
-        dublin.longitude = -6.266155;
-        cities.add(dublin);
+        City kathmandu = new City();
+        kathmandu.name = "Kathmandu";
+        kathmandu.fullDescription = "Kathmandu, Nepal";
+        kathmandu.latitude = 27.7172;
+        kathmandu.longitude = 85.3240;
+        cities.add(kathmandu);
 
-        City london = new City();
-        london.name = "London";
-        london.fullDescription = "London, UK";
-        london.latitude = 51.508530;
-        london.longitude = -0.076132;
-        cities.add(london);
+        City pokhara = new City();
+        pokhara.name = "Pokhara";
+        pokhara .fullDescription = "Pokhara, Nepal";
+        pokhara .latitude = 28.2096;
+        pokhara .longitude = 83.9856;
+        cities.add(pokhara);
+
+        City newDh = new City();
+        newDh.name = "New Delhi";
+        newDh.fullDescription = "New Delhi, India";
+        newDh.latitude = 28.6139;
+        newDh.longitude = 77.2090;
+        cities.add(newDh);
 
         City newYork = new City();
         newYork.name = "New York";
@@ -65,12 +72,7 @@ public class DbModule {
         newYork.longitude = -73.935242;
         cities.add(newYork);
 
-        City barcelona = new City();
-        barcelona.name = "Barcelona";
-        barcelona.fullDescription = "Barcelona, Spain";
-        barcelona.latitude = 41.390205;
-        barcelona.longitude = 2.154007;
-        cities.add(barcelona);
+
 
         return cities;
     }

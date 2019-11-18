@@ -1,17 +1,14 @@
 
-package com.example.openweather.data.dto;
+package com.example.openweather.model.weather;
 
-import com.example.openweather.model.weather.Clouds;
-import com.example.openweather.model.weather.Coord;
+import java.util.List;
+
 import com.example.openweather.model.weather.Main;
 import com.example.openweather.model.weather.Sys;
-
 import com.example.openweather.model.weather.Weather;
 import com.example.openweather.model.weather.Wind;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 public class ForecastDto {
 

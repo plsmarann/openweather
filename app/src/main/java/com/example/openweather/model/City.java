@@ -19,10 +19,10 @@ public class City extends BaseModel {
     public String fullDescription;
 
     @DatabaseField
-    public double latitude;
+    public Double latitude;
 
     @DatabaseField
-    public double longitude;
+    public Double longitude;
 
     @Override
     public boolean equals(Object o) {

@@ -25,7 +25,9 @@ public class CityForecastPresenter implements CityForecastContract.Presenter {
     @Override
     public void loadData(City city) {
         if (view != null) {
-            forecastRepository.getForecast(city.latitude, city.longitude).subscribe(dto -> {
+            Double lat = city.latitude;
+            Double lon = city.longitude;
+            forecastRepository.getForecast(lat, lon).subscribe(dto -> {
                 forecastDto = dto;
                 refreshUi();
             }, throwable -> {

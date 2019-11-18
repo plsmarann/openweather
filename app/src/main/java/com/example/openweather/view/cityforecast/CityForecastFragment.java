@@ -131,18 +131,18 @@ public class CityForecastFragment extends BaseFragment implements CityForecastCo
 
     @Override
     public void updateForecast(ForecastDto dto) {
-        textViewTemperature.setText(String.valueOf(WeatherUtils.getFormattedTemperature(dto.currently.temperature)));
+        textViewTemperature.setText(String.valueOf(WeatherUtils.getFormattedTemperature(dto.getMain().getTemp()-273)));
         textViewCityName.setText(city.name);
-        textViewCurrentWeather.setText(dto.currently.summary);
+        textViewCurrentWeather.setText(dto.getWeather().get(0).getDescription());
         imageViewCurrentWeather.setImageDrawable(ResourcesCompat.getDrawable(getResources(),
-                WeatherUtils.getWeatherIconResourceFromString(dto.currently.icon),
+                WeatherUtils.getWeatherIconResourceFromString(dto.getWeather().get(0).getIcon()),
                 null));
 
-        setupDayForecast(dailyWeatherViewDayOne, dto.daily.data.get(1));
-        setupDayForecast(dailyWeatherViewDayTwo, dto.daily.data.get(2));
-        setupDayForecast(dailyWeatherViewDayThree, dto.daily.data.get(3));
-        setupDayForecast(dailyWeatherViewDayFour, dto.daily.data.get(4));
-        setupDayForecast(dailyWeatherViewDayFive, dto.daily.data.get(5));
+//        setupDayForecast(dailyWeatherViewDayOne, dto.daily.data.get(1));
+//        setupDayForecast(dailyWeatherViewDayTwo, dto.daily.data.get(2));
+//        setupDayForecast(dailyWeatherViewDayThree, dto.daily.data.get(3));
+//        setupDayForecast(dailyWeatherViewDayFour, dto.daily.data.get(4));
+//        setupDayForecast(dailyWeatherViewDayFive, dto.daily.data.get(5));
     }
 
     private void setupDayForecast(DailyWeatherView dailyWeatherView, Data data) {

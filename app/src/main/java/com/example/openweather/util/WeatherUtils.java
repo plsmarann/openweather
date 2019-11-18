@@ -14,43 +14,44 @@ public final class WeatherUtils {
     public static int getWeatherIconResourceFromString(String string) {
 
         switch (string) {
-            case "clear-day": {
+            case "01d": {
                 return R.drawable.ic_sun;
             }
 
-            case "clear-night": {
+            case "01n": {
                 return R.drawable.ic_moon;
             }
 
-            case "rain": {
+            case "10d": {
                 return R.drawable.ic_rain;
             }
-
-            case "snow": {
+            case "10n": {
+                return R.drawable.ic_rain;
+            }
+            case "13d": {
+                return R.drawable.ic_snow;
+            }
+            case "13n": {
                 return R.drawable.ic_snow;
             }
 
-            case "sleet": {
-                return R.drawable.ic_sleet;
+            case "50d": {
+                return R.drawable.ic_foggy;
             }
-
-            case "wind": {
-                return R.drawable.ic_windy;
-            }
-
-            case "fog": {
+            case "50n": {
                 return R.drawable.ic_foggy;
             }
 
-            case "cloudy": {
+
+            case "03d": {
                 return R.drawable.ic_clouds;
             }
 
-            case "partly-cloudy-day": {
+            case "p02d": {
                 return R.drawable.ic_partly_cloudy_day;
             }
 
-            case "partly-cloudy-night": {
+            case "02n": {
                 return R.drawable.ic_partly_cloudy_night;
             }
 

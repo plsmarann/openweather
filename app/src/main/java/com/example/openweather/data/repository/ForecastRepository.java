@@ -6,6 +6,6 @@ import rx.Observable;
 
 public interface ForecastRepository {
 
-    Observable<ForecastDto> getForecast(double latitude, double longitude);
+    Observable<ForecastDto> getForecast(Double latitude, Double longitude);
 
 }
